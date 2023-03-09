@@ -24,3 +24,8 @@ C:\IPCA\Tecnicas de Desenvolvimento de VideoJogos\TDVJjogo\Aula\Aula\obj\Debug\n
 C:\IPCA\Tecnicas de Desenvolvimento de VideoJogos\TDVJjogo\Aula\Aula\obj\Debug\net6.0\Aula.pdb
 C:\IPCA\Tecnicas de Desenvolvimento de VideoJogos\TDVJjogo\Aula\Aula\obj\Debug\net6.0\Aula.genruntimeconfig.cache
 C:\IPCA\Tecnicas de Desenvolvimento de VideoJogos\TDVJjogo\Aula\Aula\obj\Debug\net6.0\ref\Aula.dll
+C:\IPCA\Tecnicas de Desenvolvimento de VideoJogos\TDVJjogo\Aula\Aula\bin\Debug\net6.0\Content\Character4.xnb
+C:\IPCA\Tecnicas de Desenvolvimento de VideoJogos\TDVJjogo\Aula\Aula\bin\Debug\net6.0\Content\Crate_Brown.xnb
+C:\IPCA\Tecnicas de Desenvolvimento de VideoJogos\TDVJjogo\Aula\Aula\bin\Debug\net6.0\Content\EndPoint_Blue.xnb
+C:\IPCA\Tecnicas de Desenvolvimento de VideoJogos\TDVJjogo\Aula\Aula\bin\Debug\net6.0\Content\Wall_Brown.xnb
+C:\IPCA\Tecnicas de Desenvolvimento de VideoJogos\TDVJjogo\Aula\Aula\bin\Debug\net6.0\Content\level1.txt
