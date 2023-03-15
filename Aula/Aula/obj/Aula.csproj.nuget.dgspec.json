@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\IPCA\\Tecnicas de Desenvolvimento de VideoJogos\\TDVJjogo\\Aula\\Aula\\Aula.csproj": {}
+    "D:\\IPCA\\Tecnicas de Desenvolvimento de VideoJogos\\TDVJjogo\\Aula\\Aula\\Aula.csproj": {}
   },
   "projects": {
-    "C:\\IPCA\\Tecnicas de Desenvolvimento de VideoJogos\\TDVJjogo\\Aula\\Aula\\Aula.csproj": {
+    "D:\\IPCA\\Tecnicas de Desenvolvimento de VideoJogos\\TDVJjogo\\Aula\\Aula\\Aula.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\IPCA\\Tecnicas de Desenvolvimento de VideoJogos\\TDVJjogo\\Aula\\Aula\\Aula.csproj",
+        "projectUniqueName": "D:\\IPCA\\Tecnicas de Desenvolvimento de VideoJogos\\TDVJjogo\\Aula\\Aula\\Aula.csproj",
         "projectName": "Aula",
-        "projectPath": "C:\\IPCA\\Tecnicas de Desenvolvimento de VideoJogos\\TDVJjogo\\Aula\\Aula\\Aula.csproj",
+        "projectPath": "D:\\IPCA\\Tecnicas de Desenvolvimento de VideoJogos\\TDVJjogo\\Aula\\Aula\\Aula.csproj",
         "packagesPath": "C:\\Users\\cruzm\\.nuget\\packages\\",
-        "outputPath": "C:\\IPCA\\Tecnicas de Desenvolvimento de VideoJogos\\TDVJjogo\\Aula\\Aula\\obj\\",
+        "outputPath": "D:\\IPCA\\Tecnicas de Desenvolvimento de VideoJogos\\TDVJjogo\\Aula\\Aula\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\cruzm\\AppData\\Roaming\\NuGet\\NuGet.Config",

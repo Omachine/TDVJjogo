@@ -4,16 +4,18 @@
   <Platform>DesktopGL</Platform>
   <Config />
   <SourceFiles>
-    <File>C:/IPCA/Tecnicas de Desenvolvimento de VideoJogos/TDVJjogo/Aula/Aula/Content/Character4.png</File>
-    <File>C:/IPCA/Tecnicas de Desenvolvimento de VideoJogos/TDVJjogo/Aula/Aula/Content/Crate_Brown.png</File>
-    <File>C:/IPCA/Tecnicas de Desenvolvimento de VideoJogos/TDVJjogo/Aula/Aula/Content/EndPoint_Blue.png</File>
-    <File>C:/IPCA/Tecnicas de Desenvolvimento de VideoJogos/TDVJjogo/Aula/Aula/Content/File.spritefont</File>
-    <File>C:/IPCA/Tecnicas de Desenvolvimento de VideoJogos/TDVJjogo/Aula/Aula/Content/Wall_Brown.png</File>
+    <File>D:/IPCA/Tecnicas de Desenvolvimento de VideoJogos/TDVJjogo/Aula/Aula/Content/Character4.png</File>
+    <File>D:/IPCA/Tecnicas de Desenvolvimento de VideoJogos/TDVJjogo/Aula/Aula/Content/Crate_Brown.png</File>
+    <File>D:/IPCA/Tecnicas de Desenvolvimento de VideoJogos/TDVJjogo/Aula/Aula/Content/EndPoint_Blue.png</File>
+    <File>D:/IPCA/Tecnicas de Desenvolvimento de VideoJogos/TDVJjogo/Aula/Aula/Content/File.spritefont</File>
+    <File>D:/IPCA/Tecnicas de Desenvolvimento de VideoJogos/TDVJjogo/Aula/Aula/Content/Filei.spritefont</File>
+    <File>D:/IPCA/Tecnicas de Desenvolvimento de VideoJogos/TDVJjogo/Aula/Aula/Content/Wall_Brown.png</File>
   </SourceFiles>
   <DestFiles>
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
+    <File>BURGIR.spritefont</File>
     <File xsi:nil="true" />
     <File xsi:nil="true" />
   </DestFiles>

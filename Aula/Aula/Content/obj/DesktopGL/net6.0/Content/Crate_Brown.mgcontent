@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <SourceFile>C:/IPCA/Tecnicas de Desenvolvimento de VideoJogos/TDVJjogo/Aula/Aula/Content/Crate_Brown.png</SourceFile>
+  <SourceFile>D:/IPCA/Tecnicas de Desenvolvimento de VideoJogos/TDVJjogo/Aula/Aula/Content/Crate_Brown.png</SourceFile>
   <SourceTime>2023-03-02T16:37:24.2490199+00:00</SourceTime>
-  <DestFile>C:/IPCA/Tecnicas de Desenvolvimento de VideoJogos/TDVJjogo/Aula/Aula/Content/bin/DesktopGL/Content/Crate_Brown.xnb</DestFile>
-  <DestTime>2023-03-09T16:31:56.102306+00:00</DestTime>
+  <DestFile>D:/IPCA/Tecnicas de Desenvolvimento de VideoJogos/TDVJjogo/Aula/Aula/Content/bin/DesktopGL/Content/Crate_Brown.xnb</DestFile>
+  <DestTime>2023-03-14T16:07:46.7512251+00:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2022-07-26T12:44:56+01:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

@@ -1,7 +1,9 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using System.Collections.Generic;
 using System.IO;
+using System.Collections.Generic;
 
 namespace Aula
 {
@@ -12,10 +14,11 @@ namespace Aula
         private SpriteFont SpriteFont;
         private int nrLinhas = 0;
         private int nrColunas = 0;
-        private char [,] level;
+        private char[,] level;
         private Texture2D player, dot, box, wall;
         int tileSize = 64;
-
+        public List<Point> boxes;
+        private Player sokoban;
 
         public Game1()
         {
@@ -40,7 +43,7 @@ namespace Aula
         protected override void LoadContent()
         {
             _spriteBatch = new SpriteBatch(GraphicsDevice);
-            SpriteFont = Content.Load<SpriteFont>("File");
+            SpriteFont = Content.Load<SpriteFont>("Filei");
             player = Content.Load<Texture2D>("Character4");
             dot = Content.Load<Texture2D>("EndPoint_Blue");
             box = Content.Load<Texture2D>("Crate_Brown");
@@ -52,18 +55,50 @@ namespace Aula
 
         void LoadLevel(string levelFile)
         {
-            string[] linhas = File.ReadAllLines($"Content/{levelFile}");
+            string[] linhas = File.ReadAllLines($"Content/{levelFile}"); // "Content/" + level
             nrLinhas = linhas.Length;
             nrColunas = linhas[0].Length;
-
             level = new char[nrColunas, nrLinhas];
-                    for (int x = 0; x < nrColunas; x++)
+            boxes = new List<Point>();
+
+            for (int x = 0; x < nrColunas; x++)
             {
-                for (int y = 0; y< nrLinhas; y++)
+                for (int y = 0; y < nrLinhas; y++)
                 {
-                    level[x, y] = linhas[y][x];
+                    if (linhas[y][x] == 'Y')
+                    {
+                        sokoban = new Player(x, y);
+                        level[x, y] = ' '; // put a blank instead of the sokoban 'Y'
+                    }
+
+                    else
+                    {
+                        level[x, y] = linhas[y][x];
+                    }
                 }
-            } 
+
+            }
+            for (int x = 0; x < nrColunas; x++)
+            {
+                for (int y = 0; y < nrLinhas; y++)
+                {
+                    if (linhas[y][x] == '#')
+                    {
+                        boxes.Add(new Point(x, y));
+                        level[x, y] = ' '; // put a blank instead of the box '#'
+                    }
+                    else if (linhas[y][x] == 'Y')
+                    {
+                        sokoban = new Player(x, y);
+                        level[x, y] = ' '; // put a blank instead of the sokoban 'Y'
+                    }
+                    else
+                    {
+                        level[x, y] = linhas[y][x];
+                    }
+                }
+            }
+
         }
 
         protected override void Update(GameTime gameTime)
@@ -82,6 +117,7 @@ namespace Aula
 
             // TODO: Add your drawing code here
             _spriteBatch.Begin();
+           
             Rectangle position = new Rectangle(0, 0, tileSize, tileSize);
             for (int x = 0; x < level.GetLength(0); x++) //pega a primeira dimensão
             {
@@ -106,8 +142,24 @@ namespace Aula
                     }
                 }
             }
+            //case 'Y':
+            // _spriteBatch.Draw(player, position, Color.White);
+            // break;
+            position.X = sokoban.Position.X * tileSize; //posição do Player
+            position.Y = sokoban.Position.Y * tileSize; //posição do Player
+            _spriteBatch.Draw(player, position, Color.White); //desenha o Player
+                                                              //case '#':
+                                                              // _spriteBatch.Draw(box, position, Color.White);
+                                                              // break;
+            foreach (Point b in boxes)
+            {
+                position.X = b.X * tileSize;
+                position.Y = b.Y * tileSize;
+                _spriteBatch.Draw(box, position, Color.White);
+            }
+
             _spriteBatch.End();
-            _spriteBatch.DrawString(SpriteFont, "Hello World", new Vector2(100, 100), Color.White);
+            
             _spriteBatch.DrawString(SpriteFont, $"Numero de Linhas = {nrLinhas} -- Numero de Colunas ) = {nrColunas}", new Vector2(0, 0), Color.Black);
             _spriteBatch.End();
             base.Draw(gameTime);

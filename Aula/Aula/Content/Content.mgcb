@@ -54,7 +54,14 @@
 /processor:FontDescriptionProcessor
 /processorParam:PremultiplyAlpha=True
 /processorParam:TextureFormat=Compressed
-/build:File.spritefont
+/build:File.spritefont;BURGIR.spritefont
+
+#begin Filei.spritefont
+/importer:FontDescriptionImporter
+/processor:FontDescriptionProcessor
+/processorParam:PremultiplyAlpha=True
+/processorParam:TextureFormat=Compressed
+/build:Filei.spritefont
 
 #begin Wall_Brown.png
 /importer:TextureImporter
