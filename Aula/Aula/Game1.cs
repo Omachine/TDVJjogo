@@ -158,7 +158,7 @@ namespace Aula
                 _spriteBatch.Draw(box, position, Color.White);
             }
 
-            _spriteBatch.End();
+           
             
             _spriteBatch.DrawString(SpriteFont, $"Numero de Linhas = {nrLinhas} -- Numero de Colunas ) = {nrColunas}", new Vector2(0, 0), Color.Black);
             _spriteBatch.End();
