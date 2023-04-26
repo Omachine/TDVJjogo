@@ -3,7 +3,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using System.Collections.Generic;
 using System.IO;
-using System.Collections.Generic;
+
 
 namespace Aula
 {
@@ -11,14 +11,16 @@ namespace Aula
     {
         private GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
-        private SpriteFont SpriteFont;
+        private SpriteFont font;
         private int nrLinhas = 0;
         private int nrColunas = 0;
-        private char[,] level;
-        private Texture2D player, dot, box, wall;
-        int tileSize = 64;
-        public List<Point> boxes;
+        private Texture2D player, dot, box, wall; //Load images Texture
         private Player sokoban;
+        //private char[,] level;
+        public char[,] level;
+        public List<Point> boxes;
+        int tileSize = 64;
+       
       
         public Game1()
         {
@@ -43,7 +45,7 @@ namespace Aula
         protected override void LoadContent()
         {
             _spriteBatch = new SpriteBatch(GraphicsDevice);
-            SpriteFont = Content.Load<SpriteFont>("Filei");
+            font = Content.Load<SpriteFont>("Filei");
             player = Content.Load<Texture2D>("Character4");
             dot = Content.Load<Texture2D>("EndPoint_Blue");
             box = Content.Load<Texture2D>("Crate_Brown");
@@ -90,7 +92,7 @@ namespace Aula
                     }
                     else if (linhas[y][x] == 'Y')
                     {
-                        sokoban = new Player(x, y);
+                        sokoban = new Player(this, x, y);
                         level[x, y] = ' '; // put a blank instead of the sokoban 'Y'
                     }
                     else
@@ -108,6 +110,8 @@ namespace Aula
                 Exit();
 
             // TODO: Add your update logic here
+           
+            
             sokoban.Update(gameTime);
             base.Update(gameTime);
         }
@@ -161,9 +165,24 @@ namespace Aula
 
            
             
-            _spriteBatch.DrawString(SpriteFont, $"Numero de Linhas = {nrLinhas} -- Numero de Colunas ) = {nrColunas}", new Vector2(0, 0), Color.Black);
+            _spriteBatch.DrawString(font, $"Numero de Linhas = {nrLinhas} -- Numero de Colunas ) = {nrColunas}", new Vector2(0, 0), Color.Black);
             _spriteBatch.End();
             base.Draw(gameTime);
+        }
+        public bool HasBox(int x, int y)
+        {
+            foreach (Point b in boxes)
+            {
+                if (b.X == x && b.Y == y) return true; // se a caixa tiver a mesma posição do Player
+            }
+            return false;
+        }
+        public bool FreeTile(int x, int y)
+        {
+            if (level[x, y] == 'X') return false; // se for uma parede está ocupada
+            if (HasBox(x, y)) return false; // verifica se é uma caixa
+            return true;
+            /* The same as: return level[x,y] != 'X' && !HasBox(x,y); */
         }
     }
 }
