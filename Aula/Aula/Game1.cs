@@ -20,8 +20,12 @@ namespace Aula
         public char[,] level;
         public List<Point> boxes;
         int tileSize = 64;
-       
-      
+        enum Direction
+        {
+            Up, Down, Left, Right // 0, 1, 2, 3
+        }
+        private Direction direction = Direction.Down;
+
         public Game1()
         {
             _graphics = new GraphicsDeviceManager(this);
@@ -110,8 +114,9 @@ namespace Aula
                 Exit();
 
             // TODO: Add your update logic here
-           
-            
+
+            if (Victory()) Exit(); // FIXME: Change current level
+            if (Keyboard.GetState().IsKeyDown(Keys.R)) Initialize();
             sokoban.Update(gameTime);
             base.Update(gameTime);
         }
@@ -183,6 +188,14 @@ namespace Aula
             if (HasBox(x, y)) return false; // verifica se é uma caixa
             return true;
             /* The same as: return level[x,y] != 'X' && !HasBox(x,y); */
+        }
+        public bool Victory()
+        {
+            foreach (Point b in boxes) // pecorrer a lista das caixas
+            {
+                if (level[b.X, b.Y] != '.') return false; // verifica se há caixas sem pontos
+            }
+            return true;
         }
     }
 }
