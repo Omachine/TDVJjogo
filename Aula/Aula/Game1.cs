@@ -19,7 +19,7 @@ namespace Aula
         int tileSize = 64;
         public List<Point> boxes;
         private Player sokoban;
-
+      
         public Game1()
         {
             _graphics = new GraphicsDeviceManager(this);
@@ -61,13 +61,14 @@ namespace Aula
             level = new char[nrColunas, nrLinhas];
             boxes = new List<Point>();
 
+
             for (int x = 0; x < nrColunas; x++)
             {
                 for (int y = 0; y < nrLinhas; y++)
                 {
                     if (linhas[y][x] == 'Y')
                     {
-                        sokoban = new Player(x, y);
+                        
                         level[x, y] = ' '; // put a blank instead of the sokoban 'Y'
                     }
 
@@ -107,7 +108,7 @@ namespace Aula
                 Exit();
 
             // TODO: Add your update logic here
-
+            sokoban.Update(gameTime);
             base.Update(gameTime);
         }
 
